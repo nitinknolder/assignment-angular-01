@@ -18,4 +18,4 @@ import {routes} from './login.routes';
   providers: [],
   bootstrap: []
 })
-export class UserModule { }
+export class LoginModule { }

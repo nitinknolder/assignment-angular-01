@@ -1,3 +1,5 @@
+
+<h1>LOGIN FORM</h1>
 <div class = "container">
 <form #loginForm="ngForm" (submit)="submitForm()">
   <div class = "form-group">
@@ -16,7 +18,7 @@
   <div class = "form-group">
   Password:<br>
   <input #password="ngModel" required name="password" [(ngModel)]="user.password" type="password"
-         class="form-control" placeholder="Enter Your Email"/>
+         class="form-control" placeholder="Enter Your password"/>
   <div style = "color: Green">
   <p *ngIf = "password.valid">Successfully Entered!!!</p>
   </div>
