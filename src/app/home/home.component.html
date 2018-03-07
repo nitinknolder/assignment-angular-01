@@ -6,7 +6,7 @@
   <ul *ngFor="let data1 of data">
 
     <li>{{ data1.id.videoId }}</li>
-    <a routerLink="/home/youtube/{{ data1.id.videoId }} " routerLinkActive="active">
+    <a routerLink="/login/youtube/{{ data1.id.videoId }}" routerLinkActive="active">
       <li>{{ data1.snippet.title }}</li>
     </a>
     <li>{{ data1.snippet.description}}</li>
@@ -14,6 +14,7 @@
          width={{data1.snippet.thumbnails.default.width}}>
   </ul>
 </div>
-
 <router-outlet></router-outlet>
+
+
 

@@ -10,20 +10,20 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
   @Input() email: string;
   password: string;
-  @Output() submitName = new EventEmitter();
   user: Login = new Login('' , '' );
 
   constructor(private router: Router) {
     this.email = '';
     this.password = '';
   }
-  // submit(){
-  //   this.router.navigateByUrl('home');
-  // }
+
   ngOnInit() { }
   submitForm() {
-     this.router.navigate(['/home']);
+     this.router.navigate(['/login/home']);
     console.log(this.user);
   }
 
+  navigateTo() {
+
+  }
 }

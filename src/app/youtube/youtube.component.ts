@@ -13,11 +13,11 @@ export class YoutubeComponent implements OnInit {
   url: string;
   videoLink: SafeUrl;
   constructor(private router: ActivatedRoute, public sanitizer: DomSanitizer) {
-    this.photoURL();
+    this.linkURL();
   }
   ngOnInit() {
   }
-  photoURL() {
+  linkURL() {
     this.url = 'https://www.youtube.com/embed/' + this.router.snapshot.params['id'];
     this.videoLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
   }

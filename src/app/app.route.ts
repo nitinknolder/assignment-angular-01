@@ -11,16 +11,13 @@ export const route: Routes = [{
   pathMatch: 'full'
 }, {
   path: 'login',
-  component: LoginComponent
-}, {
-  path: 'home',
-  component: HomeComponent,
+  component: LoginComponent,
   children: [{
+    path: 'home',
+    component: HomeComponent
+  }, {
     path: 'youtube/:id',
     component: YoutubeComponent
   }]
 }];
-
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
-
-
